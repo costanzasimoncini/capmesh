@@ -1,5 +1,5 @@
 function [vertex, tri, quadri] = read_vtk_TriQuad(filename)
-% filename='../../../ExportAnsys/OpenCatheter.vtk';
+
 % read_vtk - read data from VTK file.
 %
 %   [vertex,face] = read_vtk(filename, verbose);
@@ -8,6 +8,9 @@ function [vertex, tri, quadri] = read_vtk_TriQuad(filename)
 %   'face' is a 'nb.face x 3' array specifying the connectivity of the mesh.
 %
 %   Copyright (c) Mario Richtsfeld
+%
+%   Modifications by Costanza Simoncini: 
+%   detection of triangles and quadrilaterals
 
 fid = fopen(filename,'r');
 if( fid==-1 )
